@@ -11,11 +11,9 @@ class Signup {
         $username = $_POST["username"];
         $email = $_POST["email"];
         $password = md5($_POST['password']);
-        // if(\Model\User::signup($username, $email, $password)){
-        //     $_SESSION["auth"]="true";
-        //     $_SESSION["username"]=$username;
-        //     header("Location: /");
-        // }
+        if(\Model\Login::signup($username, $email, $password)){
+          echo \View\Loader::make()->render("templates/home.twig");
+        }
 
     }
 

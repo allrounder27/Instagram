@@ -9,4 +9,9 @@ Toro::serve(array(
     "/" => "\Controller\Home",
     "/login" => "\Controller\Login",
     "/signup" => "\Controller\Signup",
+    "/post" => "\Controller\Post",
+    "/feed" => "\Controller\Feed",
+    "/like" => "\Controller\Like",
+    "/comment" => "\Controller\Comment",
+
 ));
