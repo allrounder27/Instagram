@@ -1,7 +1,6 @@
 <?php
 
 session_start();
-$_SESSION["loggedin"]=false;
 
 require __DIR__."/../vendor/autoload.php";
 
@@ -13,5 +12,9 @@ Toro::serve(array(
     "/feed" => "\Controller\Feed",
     "/like" => "\Controller\Like",
     "/comment" => "\Controller\Comment",
+    "/profile" => "\Controller\Profile",
+    "/trending" => "\Controller\Trending",
+    "/pic" => "\Controller\Pic",
+
 
 ));

@@ -2,17 +2,15 @@
 
 namespace Controller;
 
-class Post
+class Pic
 {
     public function get()
     {
-        echo \View\Loader::make()->render("templates/post.twig");
+        echo \View\Loader::make()->render("templates/editprofile.twig");
     }
     public function post()
     {
-        $caption = $_POST["caption"];
         $userid = $_SESSION["userid"];
-        $username = $_SESSION["username"];
         $image = $_FILES["image"]["name"];
         $target_dir = "assets/upload/";
         $dir_name = 'assets/feeds';
@@ -26,8 +24,8 @@ class Post
 
         if (in_array($imageFileType, $extensions_arr)) {
             move_uploaded_file($_FILES['image']['tmp_name'], $target_dir.$image);
-            if (\Model\Post::post($target_filepath, $caption, $userid, $image, $username)) {
-                header("location: /feed");
+            if (\Model\Pic::post($target_filepath, $image, $userid)) {
+                header("location: /profile");
             }
         }
     }

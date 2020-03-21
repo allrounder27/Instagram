@@ -1,14 +1,14 @@
-<!DOCTYPE html>
-<html>
-<body>
+{% include("templates/header.twig") %}
+{% include("templates/navbar.twig") %}
 
 <form action="/post" method="post" enctype="multipart/form-data">
-    Select image to upload:
+  <p class="dashboard_title">
+      Select image to upload:
+  </p>
     <br><br>
     <input type="file" name="image"><br><br>
-    <input type="text" name="caption"><br><br>
+    <input type="text" name="caption" placeholder="Caption"><br><br>
     <input type="submit" value="Post" name="Post">
 </form>
 
-</body>
-</html>
+{% include("templates/footer.twig") %}

@@ -1,10 +1,10 @@
-
 {
     "name": "allrounder27/instagram",
     "description": "Instagram clone based on MVC Architecture",
     "require": {
         "torophp/torophp": "dev-master",
-        "twig/twig": "^3.0"
+        "twig/twig": "^3.0",
+        "twbs/bootstrap": "4.4.1"
     },
     "autoload": {
         "classmap": ["app"]

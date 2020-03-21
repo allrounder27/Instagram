@@ -1,0 +1,53 @@
+{% include("templates/header.twig") %}
+{% include("templates/navbar.twig") %}
+
+
+{% for data in profile %}
+<div style="width:800px; margin:0 auto;">
+  <div class="d-flex justify-content-center">
+    <div class="p-2 flex-fill">
+      <img src="assets/upload/{{data.pic}}" class="rounded-circle">
+    </div>
+    <div class="p-2 flex-fill">
+      <div class="d-flex flex-column">
+        <div class="p-2">
+          <p class="login_title">
+            {{data.username}}
+          </p>
+        </div>
+        <div class="p-2">
+          <p class="login_text">
+            {{data.email}}
+          </p>
+        </div>
+        <div class="p-2">
+          <form method='get' action='/pic'>
+            <button type='submit' class="btn btn-primary btn-block">Edit Profile</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><br><hr width="50%"><br>
+{% endfor %}
+
+{% for post in myposts %}
+
+<div class="card card_a" style="width:700px">
+  <img class="card-img-top border-bottom" src="assets/upload/{{post.name}}" alt="Card image">
+  <div class="card-body">
+    <p class="card-text">{{post.caption}}</p>
+    <p class="card-text">Liked by {{post.likes}} users</p>
+    <p class="card-text">{{post.time}}</p>
+    {% for comment in comments %}
+    {% if (comment.imageid==post.id) %}
+    <p>
+      <b>{{comment.username}}</b> {{comment.comment}}
+    </p>
+    {% endif %}
+    {% endfor %}
+  </div>
+</div><br><br><br>
+
+{% endfor %}
+{% include("templates/footer.twig") %}

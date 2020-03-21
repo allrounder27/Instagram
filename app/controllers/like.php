@@ -7,6 +7,7 @@ class Like {
     {
       $imageid = $_POST["imageid"];
       \Model\Post::like($imageid);
+      header("location: /feed");
           }
 
     }

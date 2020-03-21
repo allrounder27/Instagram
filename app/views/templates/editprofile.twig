@@ -1,0 +1,13 @@
+{% include("templates/header.twig") %}
+{% include("templates/navbar.twig") %}
+
+<form action="/pic" method="post" enctype="multipart/form-data">
+  <p class="dashboard_title">
+    Select image to upload:
+  </p>
+  <br><br>
+  <input type="file" name="image"><br><br>
+  <input type="submit" value="Change Pic" name="Post">
+</form>
+
+{% include("templates/footer.twig") %}

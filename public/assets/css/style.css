@@ -1,0 +1,19 @@
+.login_text{
+  text-align: center;
+}
+.login_title{
+  text-align: center;
+  font-size: 60px;
+  font-family: 'Lobster', cursive;
+}
+.dashboard_title{
+  font-size: 30px;
+  font-family: 'Lobster', cursive;
+}
+.btn_a{
+  font-size: 20px;
+  margin-top: 10px;
+}
+.card_a{
+  margin: 0 auto;
+}

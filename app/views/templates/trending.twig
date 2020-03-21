@@ -2,18 +2,10 @@
 {% include("templates/navbar.twig") %}
 
 <p align="center">
-  Latest Posts-
+  Trending Posts-
 </p>
 
-{% for post in latest %}
-{% include("templates/card.twig") %}
-{% endfor %}
-
-<p align="center">
-  Top Posts-
-</p>
-
-{% for post in top %}
+{% for post in trending %}
 {% include("templates/card.twig") %}
 {% endfor %}
 
