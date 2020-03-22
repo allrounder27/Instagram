@@ -1,14 +1,37 @@
 {% include("templates/header.twig") %}
 {% include("templates/navbar.twig") %}
 
-<form action="/post" method="post" enctype="multipart/form-data">
-  <p class="dashboard_title">
-      Select image to upload:
-  </p>
-    <br><br>
-    <input type="file" name="image"><br><br>
-    <input type="text" name="caption" placeholder="Caption"><br><br>
-    <input type="submit" value="Post" name="Post">
-</form>
+<div style="width:800px; margin:0 auto;">
+
+  <div class="d-flex justify-content-center">
+
+    <div class="p-2">
+      <img src="/assets/images/post.jpeg" height="100%" width="100%">
+    </div>
+
+    <div class="p-2">
+      <div class="d-flex flex-column">
+        <div class="p-2">
+          <p class="login_title">
+            Select image to upload:
+          </p>
+        </div>
+        <div class="p-2 border">
+          <form method='post' action='/post' enctype='multipart/form-data'>
+            <div class="form-group">
+              <label for="file">Choose Photo:</label>
+              <input type='file' class="form-control" name="image" placeholder="Choose Photo">
+              <label for="caption">Enter Caption:</label>
+              <input type='text' class="form-control" name="caption" placeholder="Enter Caption">
+            </div>
+            <button type='submit' class="btn btn-primary btn-block">Post</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
 
 {% include("templates/footer.twig") %}

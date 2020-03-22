@@ -5,6 +5,7 @@ session_start();
 require __DIR__."/../vendor/autoload.php";
 
 Toro::serve(array(
+  
     "/" => "\Controller\Home",
     "/login" => "\Controller\Login",
     "/signup" => "\Controller\Signup",
@@ -15,6 +16,7 @@ Toro::serve(array(
     "/profile" => "\Controller\Profile",
     "/trending" => "\Controller\Trending",
     "/pic" => "\Controller\Pic",
-
+    "/handle" => "\Controller\Handle",
+    "/logout" => "\Controller\Logout",
 
 ));

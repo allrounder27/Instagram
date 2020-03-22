@@ -1,66 +1,89 @@
-{% include("templates/header.twig") %}
+<!doctype html>
+<html lang="en">
 
+<head>
 
-<div style="width:800px; margin:0 auto;">
-  <div class="d-flex justify-content-center">
-    <div class="p-2">
-      <img src="/assets/images/phone.jpeg" height="100%" width="100%">
-    </div>
-    <div class="p-2">
-      <div class="d-flex flex-column">
-        <div class="p-2">
-          <p class="login_title">
-            Instagram
-          </p>
-        </div>
-        <div class="p-2 border">
-          <form method='post' action='/login'>
-            <label for="username">Username:</label><br>
-            <input type='text' name='username'><br>
-            <label for="password">Password:</label><br>
-            <input type='password' name ='password'><br>
-            <button type ='submit'>submit</button>
-          </form>
-          <!-- <form method='post' action='/login'>
-            <div class="form-group">
-              <label for="username">Username:</label>
-              <input type="text" class="form-control" placeholder="Enter username">
-            </div>
-            <div class="form-group">
-              <label for="password">Password:</label>
-              <input type="password" class="form-control" placeholder="Enter password">
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">Log in</button>
-          </form> -->
-        </div>
-        <div class="p-2 border">
-          <p class="login_text">
-            Don't have an account? <a href='/signup'>Sign up</a>
-          </p>
-        </div>
-        <div class="p-2 border">
-          <p class="login_text">
-            Get the app.
-          </p>
-          <div class="d-flex">
-            <div class="p-2">
-              <a href="https://itunes.apple.com/app/instagram/id389801252?pt=428156&ct=igweb.loginPage.badge&mt=8&vt=lo">
-                <img src="/assets/images/appstore.png" height="50px" width="150px">
-              </a>
-            </div>
-            <div class="p-2">
-              <a href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26ig_mid%3D83D0319C-19E2-481F-9FFD-EEBAF2CD6CDA%26utm_content%3Dlo%26utm_medium%3Dbadge">
-                <img src="/assets/images/googleplay.png" height="50px" width="150px">
-              </a>
-            </div>
-          </div>
-        </div>
+  <script language="javascript" type="text/javascript">
+    window.history.forward();
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/bc806a8e41.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="/assets/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+  <link href="/assets/css/style.css" rel="stylesheet">
+
+  <title>Instagram</title>
+
+</head>
+
+<body>
+
+  <div style="width:800px; margin:1.5% auto;">
+
+    <div class="d-flex justify-content-center">
+
+      <div class="p-2">
+        <img src="/assets/images/phone.jpeg" height="100%" width="100%">
       </div>
+
+      <div class="p-2">
+
+        <div class="d-flex flex-column">
+
+          <div class="p-2">
+            <p class="login_title">
+              Instagram
+            </p>
+          </div>
+
+          <div class="p-2 border">
+            <form method='post' action='/login'>
+              <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" name="username" placeholder="Enter username">
+              </div>
+              <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" name="password" placeholder="Enter password">
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Log in</button>
+            </form>
+          </div>
+
+          <div class="p-2 border">
+            <p class="login_text">
+              Don't have an account? <a href='/signup'>Sign up</a>
+            </p>
+          </div>
+
+          <div class="p-2 border">
+            <p class="login_text">
+              Get the app.
+            </p>
+            <div class="d-flex">
+              <div class="p-2">
+                <a href="https://itunes.apple.com/app/instagram/id389801252?pt=428156&ct=igweb.loginPage.badge&mt=8&vt=lo">
+                  <img src="/assets/images/appstore.png" height="50px" width="150px">
+                </a>
+              </div>
+              <div class="p-2">
+                <a href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26ig_mid%3D83D0319C-19E2-481F-9FFD-EEBAF2CD6CDA%26utm_content%3Dlo%26utm_medium%3Dbadge">
+                  <img src="/assets/images/googleplay.png" height="50px" width="150px">
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
+
   </div>
-</div>
 
-
-
-
-{% include("templates/footer.twig") %}
+  {% include("templates/footer.twig") %}

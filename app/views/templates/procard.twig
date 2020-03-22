@@ -5,9 +5,6 @@
       <div class="p-2">
         <img src="/assets/images/thumbnail.png" height="40px" width="40px">
       </div>
-      <div class="p-2">
-        <h3 class="card-title">{{post.username}}</h3>
-      </div>
     </div>
   </div>
 
@@ -15,15 +12,10 @@
 
   <div class="card-body border-bottom">
     <span class="card-text"><b>{{post.username}} </b>{{post.caption}}</span>
+    <p class="card-text">{{post.time}}</p>
   </div>
 
   <div class="card-body d-flex margin border-bottom">
-    <div class="p-2">
-      <form method='post' action='/like'>
-        <input type="hidden" value="{{post.id}}" name="imageid">
-        <button type='submit' class="btn"><i class="far fa-heart fa-2x"></i></button>
-      </form>
-    </div>
     <div class="p-2 align-self-center">
       <span class="card-text">Liked by {{post.likes}} users</span>
     </div>
@@ -47,4 +39,6 @@
       <button type='submit' class="btn"><i class="far fa-comment-alt fa-2x"></i></button>
     </form>
   </div>
-</div><br><br><br>
+
+</div>
+<br><br><br>

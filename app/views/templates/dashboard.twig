@@ -1,20 +1,20 @@
-{% include("templates/header.twig") %}
-{% include("templates/navbar.twig") %}
+  {% include("templates/header.twig") %}
+  {% include("templates/navbar.twig") %}
 
-<p align="center">
-  Latest Posts-
-</p>
+  <p class="login_title">
+    Latest Posts-
+  </p>
 
-{% for post in latest %}
-{% include("templates/card.twig") %}
-{% endfor %}
+  {% for post in latest %}
+  {% include("templates/card.twig") %}
+  {% endfor %}
 
-<p align="center">
-  Top Posts-
-</p>
+  <p class="login_title">
+    Top Posts-
+  </p>
 
-{% for post in top %}
-{% include("templates/card.twig") %}
-{% endfor %}
+  {% for post in top %}
+  {% include("templates/card.twig") %}
+  {% endfor %}
 
-{% include("templates/footer.twig") %}
+  {% include("templates/footer.twig") %}

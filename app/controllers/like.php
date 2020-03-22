@@ -2,12 +2,18 @@
 
 namespace Controller;
 
-class Like {
+class Like
+{
     public function post()
     {
-      $imageid = $_POST["imageid"];
-      \Model\Post::like($imageid);
-      header("location: /feed");
-          }
-
+        $userid=$_SESSION["userid"];
+        $imageid = $_POST["imageid"];
+        if (!(\Model\Post::liked($imageid, $userid))) {
+            \Model\Post::like($imageid, $userid);
+            header("location: /feed");
+        } else {
+            \Model\Post::dislike($imageid, $userid);
+            header("location: /feed");
+        }
     }
+}

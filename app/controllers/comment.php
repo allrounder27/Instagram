@@ -2,7 +2,8 @@
 
 namespace Controller;
 
-class Comment {
+class Comment
+{
     public function post()
     {
         $comment = $_POST["comment"];
@@ -10,6 +11,5 @@ class Comment {
         $userid = $_SESSION["userid"];
         \Model\Comment::comment($comment, $imageid, $userid);
         header("location: /feed");
-        }
-
     }
+}

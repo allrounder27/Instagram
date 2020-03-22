@@ -6,7 +6,11 @@ class Pic
 {
     public function get()
     {
-        echo \View\Loader::make()->render("templates/editprofile.twig");
+        if ($_SESSION["loggedin"]) {
+            echo \View\Loader::make()->render("templates/editprofile.twig");
+        } else {
+            echo "You are not logged in!";
+        }
     }
     public function post()
     {

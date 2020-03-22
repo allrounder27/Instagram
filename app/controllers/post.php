@@ -6,7 +6,11 @@ class Post
 {
     public function get()
     {
-        echo \View\Loader::make()->render("templates/post.twig");
+        if ($_SESSION["loggedin"]) {
+            echo \View\Loader::make()->render("templates/post.twig");
+        } else {
+            echo "You are not logged in!";
+        }
     }
     public function post()
     {

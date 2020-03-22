@@ -13,8 +13,7 @@ class Feed
             "comments"=> \Model\Comment::get_comment(),
         ));
         } else {
-              echo "You are not logged in!";
-
+            echo "You are not logged in!";
         }
     }
 }
